@@ -1,0 +1,193 @@
+<?php
+
+namespace Troiswa\PublicBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Acteur
+ *
+ * @ORM\Table(name="acteur")
+ * @ORM\Entity(repositoryClass="Troiswa\PublicBundle\Entity\ActeurRepository")
+ */
+class Acteur
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="text")
+     */
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="text")
+     */
+    private $nom;
+
+    /**
+     * @var \Date
+     *
+     * @ORM\Column(name="datenaissance", type="date")
+     */
+    private $datenaissance;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sexe", type="text")
+     */
+    private $sexe;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nationalite", type="text")
+     */
+    private $nationalite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="biographie", type="text")
+     */
+    private $biographie;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set prenom
+     *
+     * @param string $prenom
+     * @return Acteurs
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom
+     *
+     * @return string 
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     * @return Acteurs
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string 
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set sexe
+     *
+     * @param string $sexe
+     * @return Acteurs
+     */
+    public function setSexe($sexe)
+    {
+        $this->sexe = $sexe;
+
+        return $this;
+    }
+
+    /**
+     * Get sexe
+     *
+     * @return string 
+     */
+    public function getSexe()
+    {
+        return $this->sexe;
+    }
+
+    /**
+     * Set nationalite
+     *
+     * @param string $nationalite
+     * @return Acteurs
+     */
+    public function setNationalite($nationalite)
+    {
+        $this->nationalite = $nationalite;
+
+        return $this;
+    }
+
+    /**
+     * Get nationalite
+     *
+     * @return string 
+     */
+    public function getNationalite()
+    {
+        return $this->nationalite;
+    }
+
+    /**
+     * Set biographie
+     *
+     * @param string $biographie
+     * @return Acteurs
+     */
+    public function setBiographie($biographie)
+    {
+        $this->biographie = $biographie;
+
+        return $this;
+    }
+
+    /**
+     * Get biographie
+     *
+     * @return string 
+     */
+    public function getBiographie()
+    {
+        return $this->biographie;
+    }
+
+
+}

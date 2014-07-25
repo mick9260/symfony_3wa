@@ -1,0 +1,98 @@
+{% extends'TroiswaPublicBundle::layout.html.twig' %}
+
+
+{% block title %}
+    {{ parent() }} acteur
+{% endblock %}
+
+{% block body %}
+
+    {#AVANT#}
+{#{{ form(formActeur)}}#}
+
+
+
+    {#APRES : Pour insérer du css#}
+    <br>
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        {{ form_start(formActeur,{'attr':{'novalidate':'novalidate'}}) }}
+
+
+       {#prenom#}
+       <div class="form-group">
+            {{ form_label(formActeur.prenom,'PRENOM')}}
+       {# <label>Prénom</label> #}
+
+            {{ form_widget(formActeur.prenom,{'attr':{'class':'form-control', 'placeholder':"Prénom"}}) }}
+       {# <input type="text"> #}
+
+            {{ form_errors(formActeur.prenom)}}
+       </div>
+
+
+       {#nom#}
+       <div class="form-group">
+            {{ form_label(formActeur.nom,'NOM')}}
+           {# pour mettre une class dans le label, entrer un 3ème paramètres tel que ,{label_attr:{'class':'coucou'#}
+       {# <label>nom</label> #}
+
+            {{ form_widget(formActeur.nom,{'attr':{'class':'form-control', 'placeholder':"Nom"}}) }}
+       {# <input type="text"> #}
+
+            {{ form_errors(formActeur.nom)}}
+       </div>
+
+       {#datenaissance#}
+       <div class="form-group">
+            {{ form_label(formActeur.datenaissance, 'DATE DE NAISSANCE')}}
+       {# <label>datenaissance</label> #}
+
+            {{ form_widget(formActeur.datenaissance,{'attr':{'class':'form-control'}}) }}
+       {# <input type="text"> #}
+
+            {{ form_errors(formActeur.datenaissance)}}
+       </div>
+
+       {#sexe#}
+           <div class="form-group">
+            {{ form_label(formActeur.sexe, 'SEXE')}}
+       {# <label>sexe</label> #}
+
+            {{ form_widget(formActeur.sexe) }}
+       {# <input type="text"> #}
+
+            {{ form_errors(formActeur.sexe)}}
+       </div>
+
+       {#nationalite#}
+       <div class="form-group">
+            {{ form_label(formActeur.nationalite, 'NATIONALITE')}}
+       {# <label>nationalite</label> #}
+
+            {{ form_widget(formActeur.nationalite,{'attr':{'class':'form-control', 'placeholder':"Nationalité"}}) }}
+       {# <input type="text"> #}
+
+            {{ form_errors(formActeur.nationalite)}}
+       </div>
+
+       {#biographie#}
+       <div class="form-group">
+            {{ form_label(formActeur.biographie, 'BIOGRAPHIE')}}
+       {# <label>biographie</label> #}
+
+            {{ form_widget(formActeur.biographie,{'attr':{'class':'form-control', 'placeholder':"Biographie"}}) }}
+       {# <input type="text"> #}
+
+            {{ form_errors(formActeur.biographie)}}
+       </div>
+
+        {{ form_widget(formActeur.ajouter,{'attr':{'class':'btn btn-primary'}}) }}
+   </div>
+
+    {{ form_end(formActeur) }}
+
+</div>
+
+</div>
+{% endblock %}

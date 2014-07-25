@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Competence</title>
+
+</head>
+<body>
+
+
+
+Mes compétences sont:
+{#{{ dump(competence) }}#}
+{% for key, info in competence %}
+    <p>{{ key }} => <br> <input data-fgColor="{{ info.color }}" data-width="75" type="text" value="{{ info.note }}" class="dial"></p>
+{% endfor %}
+
+
+
+
+
+{#commentaire
+{{ affichage}}
+{%: test, foreach, etc,... %}
+
+#}
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="{{ asset('js/jquery.knob.js') }}"></script>
+
+
+<script>
+    $(document).ready(function() {
+        $(".dial").knob({
+        "min":0,
+        "max":10,
+        });
+    });
+
+</script>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,13 @@
+troiswa_public_update_acteur:
+    path: /acteur/update/{id}
+    defaults: { _controller: TroiswaPublicBundle:acteur:updateacteur}
+    requirements:
+            id: \d+
+
+troiswa_public_addacteur:
+    path: /addacteur
+    defaults: { _controller: TroiswaPublicBundle:acteur:addacteur}
+
+troiswa_public_addfilm:
+    path: /addfilms
+    defaults: { _controller: TroiswaPublicBundle:film:addfilms }
